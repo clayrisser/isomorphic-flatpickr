@@ -1,0 +1,60 @@
+{
+  "name": "isomorphic-flatpickr",
+  "version": "0.0.1",
+  "description": "Isomorphic support for flatpickr",
+  "homepage": "https://isomorphic-flatpickr.codejam.ninja",
+  "bugs": {
+    "url": "https://github.com/codejamninja/isomorphic-flatpickr/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "main": "lib/index.js",
+  "files": ["lib"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/isomorphic-flatpickr"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run test && babel src -d lib",
+    "clean": "rm -rf lib",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
+    "prepublish": "npm run build",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "flatpickr": "^4.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "4"
+          }
+        }
+      ],
+      "stage-2"
+    ]
+  },
+  "eslintIgnore": ["lib"]
+}
